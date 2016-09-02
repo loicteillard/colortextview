@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ColorTextViewAttrs">
+        <attr name="clt_txt1" format="string"/>
+        <attr name="clt_color1" format="color"/>
+        <attr name="clt_txt2" format="string"/>
+        <attr name="clt_color2" format="color"/>
+        <attr name="clt_txt3" format="string"/>
+        <attr name="clt_color3" format="color"/>
+        <attr name="clt_txt4" format="string"/>
+        <attr name="clt_color4" format="color"/>
+        <attr name="clt_txt5" format="string"/>
+        <attr name="clt_color5" format="color"/>
+        <attr name="clt_txt6" format="string"/>
+        <attr name="clt_color6" format="color"/>
+        <attr name="clt_txt7" format="string"/>
+        <attr name="clt_color7" format="color"/>
+        <attr name="clt_txt8" format="string"/>
+        <attr name="clt_color8" format="color"/>
+        <attr name="clt_txt9" format="string"/>
+        <attr name="clt_color9" format="color"/>
+        <attr name="clt_txt10" format="string"/>
+        <attr name="clt_color10" format="color"/>
+        <attr name="clt_spaces" format="boolean"/>
+    </declare-styleable>
+</resources>
