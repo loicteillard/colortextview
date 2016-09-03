@@ -1,6 +1,7 @@
 package loic.teillard.sample;
 
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.ViewGroup;
 
@@ -21,9 +22,9 @@ public class MainActivity extends AppCompatActivity {
         ColorTextView colorTextView = new ColorTextView(this);
 
         LinkedHashMap<String,Integer> stringcolors = new LinkedHashMap<>();
-        stringcolors.put("Lorem ipsum dolor sit amet, consectetur", R.color.md_deep_orange_A200);
-        stringcolors.put("adipiscing elit, sed do eiusmod tempor incididunt",R.color.md_blue_600);
-        stringcolors.put("incididunt ut labore et dolore magna aliqua.",R.color.md_brown_500);
+        stringcolors.put("Lorem ipsum dolor sit amet, consectetur", ContextCompat.getColor(this,R.color.md_deep_orange_A200));
+        stringcolors.put("adipiscing elit, sed do eiusmod tempor incididunt",ContextCompat.getColor(this,R.color.md_blue_600));
+        stringcolors.put("incididunt ut labore et dolore magna aliqua.",ContextCompat.getColor(this,R.color.md_brown_500));
 
         colorTextView.setSpaces(true);
 

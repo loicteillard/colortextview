@@ -89,19 +89,16 @@ public class ColorTextView extends AppCompatTextView {
 
         mSpaces = attrsArray.getBoolean(R.styleable.ColorTextViewAttrs_clt_spaces, false);
 
-        String sep = "";
-        if (mSpaces) sep = " ";
-
-        addTextColor(txt1, color1, "");
-        addTextColor(txt2, color2, sep);
-        addTextColor(txt3, color3, sep);
-        addTextColor(txt4, color4, sep);
-        addTextColor(txt5, color5, sep);
-        addTextColor(txt6, color6, sep);
-        addTextColor(txt7, color7, sep);
-        addTextColor(txt8, color8, sep);
-        addTextColor(txt9, color9, sep);
-        addTextColor(txt10, color10, sep);
+        addTextColor(txt1, color1);
+        addTextColor(txt2, color2);
+        addTextColor(txt3, color3);
+        addTextColor(txt4, color4);
+        addTextColor(txt5, color5);
+        addTextColor(txt6, color6);
+        addTextColor(txt7, color7);
+        addTextColor(txt8, color8);
+        addTextColor(txt9, color9);
+        addTextColor(txt10, color10);
     }
 
     private LinkedHashMap<String, Integer> getTxtColors() {
@@ -109,12 +106,12 @@ public class ColorTextView extends AppCompatTextView {
         return mTxtColors;
     }
 
-//    private void setTxtColors(LinkedHashMap<String, Integer> txtColors) {
-//        mTxtColors = txtColors;
-//    }
+    public void addTextColor(String text, int color) {
+        if (text != null && text.trim().length() > 0 && color != 0) getTxtColors().put((isSpaces() ? " " : "") + text, color);
+    }
 
-    private void addTextColor(String text, int color, String sep) {
-        if (text != null && text.trim().length() > 0 && color != 0) getTxtColors().put(sep + text, color);
+    public void addTextColorRes(int text, int color) {
+        addTextColor(getContext().getString(text),ContextCompat.getColor(getContext(),color));
     }
 
     public void apply(LinkedHashMap<String, Integer> txtColors) {
@@ -123,7 +120,7 @@ public class ColorTextView extends AppCompatTextView {
             return;
         }
         for (Map.Entry<String, Integer> entry : txtColors.entrySet())
-            addTextColor(entry.getKey(), ContextCompat.getColor(getContext(), entry.getValue()), isSpaces() ? " " : "");
+            addTextColor(entry.getKey(), entry.getValue());
         setColorWords();
     }
 
