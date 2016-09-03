@@ -10,7 +10,6 @@ import android.text.SpannableString;
 import android.text.TextUtils;
 import android.text.style.ForegroundColorSpan;
 import android.util.AttributeSet;
-import android.util.Log;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -114,11 +113,11 @@ public class ColorTextView extends AppCompatTextView {
         addTextColor(getContext().getString(text),ContextCompat.getColor(getContext(),color));
     }
 
-    public void apply(LinkedHashMap<String, Integer> txtColors) {
-        if (txtColors == null) {
-            Log.e("ColorTextView","strings & colors must be not null!");
-            return;
-        }
+    public void apply() {
+
+        LinkedHashMap<String, Integer> txtColors = (LinkedHashMap<String, Integer>) getTxtColors().clone();
+        getTxtColors().clear();
+
         for (Map.Entry<String, Integer> entry : txtColors.entrySet())
             addTextColor(entry.getKey(), entry.getValue());
         setColorWords();

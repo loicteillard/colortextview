@@ -1,11 +1,9 @@
 package loic.teillard.sample;
 
+import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.ViewGroup;
-
-import java.util.LinkedHashMap;
 
 import loic.teillard.colortextview.ColorTextView;
 
@@ -21,15 +19,32 @@ public class MainActivity extends AppCompatActivity {
 
         ColorTextView colorTextView = new ColorTextView(this);
 
-        LinkedHashMap<String,Integer> stringcolors = new LinkedHashMap<>();
-        stringcolors.put("Lorem ipsum dolor sit amet, consectetur", ContextCompat.getColor(this,R.color.md_deep_orange_A200));
-        stringcolors.put("adipiscing elit, sed do eiusmod tempor incididunt",ContextCompat.getColor(this,R.color.md_blue_600));
-        stringcolors.put("incididunt ut labore et dolore magna aliqua.",ContextCompat.getColor(this,R.color.md_brown_500));
+        colorTextView.addTextColor("Lorem ipsum dolor sit amet, consectetur", Color.DKGRAY);
+        colorTextView.addTextColor("adipiscing elit, sed do eiusmod tempor incididunt", Color.RED);
+        colorTextView.addTextColor("incididunt ut labore et dolore magna aliqua.", Color.GREEN);
 
         colorTextView.setSpaces(true);
 
-        colorTextView.apply(stringcolors);
+        colorTextView.apply();
 
         layout.addView(colorTextView);
+
+        // -------------------------
+
+        ColorTextView colorTextViewRes = new ColorTextView(this);
+
+        ViewGroup.MarginLayoutParams mlp = (ViewGroup.MarginLayoutParams) colorTextView.getLayoutParams();
+        mlp.topMargin = getResources().getDimensionPixelSize(R.dimen.margin_top);
+        colorTextViewRes.setLayoutParams(mlp);
+
+        colorTextViewRes.addTextColorRes(R.string.lorem, R.color.md_deep_orange_A200);
+        colorTextViewRes.addTextColorRes(R.string.adipiscing, R.color.md_blue_600);
+        colorTextViewRes.addTextColorRes(R.string.incididunt, R.color.md_brown_500);
+
+        colorTextViewRes.setSpaces(true);
+
+        colorTextViewRes.apply();
+
+        layout.addView(colorTextViewRes);
     }
 }
