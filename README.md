@@ -5,7 +5,7 @@ Change color of words into a TextView.
 
 ![Screenshot](./screenshot.png)
 
-This library used spannable strings to apply colors of the substring (no slow Html.fromHtml or other tricks/hacks)  
+This library uses spannable strings to apply colors of the substring (no slow Html.fromHtml or other tricks/hacks)  
 
 ### Installation
 
