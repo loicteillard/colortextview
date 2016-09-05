@@ -1,5 +1,29 @@
 apply plugin: 'com.android.library'
 
+ext {
+    bintrayRepo = 'ColorTextView'
+    bintrayName = 'colortextview'
+
+    publishedGroupId = 'loic.teillard.colortextview'
+    libraryName = 'ColorTextView'
+    artifact = 'colortextview'
+
+    libraryDescription = 'Easy colors for TextView (Android)'
+
+    siteUrl = 'https://github.com/apocalx/colortextview'
+    gitUrl = 'https://github.com/apocalx/colortextview.git'
+
+    libraryVersion = '1.0.0'
+
+    developerId = 'apocalx'
+    developerName = 'Loïc Teillard'
+    developerEmail = 'loicteillard@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
 android {
     compileSdkVersion 24
     buildToolsVersion "24.0.2"
@@ -22,7 +46,11 @@ android {
 //https://bintray.com/docs/usermanual/uploads/uploads_includingyourpackagesinjcenter.html
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:24.2.0'
+    compile 'com.android.support:support-v4:24.2.0'
 }
+
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
