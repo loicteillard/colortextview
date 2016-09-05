@@ -63,7 +63,7 @@ The color can be applied from XML or Java (please see sample for good examples) 
 | Function        | Description  |Comment|
 | :-------------: |:-------------:| :-----:|
 | addTextColor(String,int) | Add text with this color|Call it as many times you need to add strings
-| addTextColor(int,int) | Add text with this color, both from Resources ID (ex : R.string.text, R.color.blue)|Call it as many times you need to add strings
+| addTextColorRes(int,int) | Add text with this color, both from Resources ID (ex : R.string.text, R.color.blue)|Call it as many times you need to add strings
 | setSpaces(boolean) | Automatically add spaces between words|no need to add yourself (pass to false if you need to color substring inside a string)
 | apply() | When ready, apply your parameters| |
 
