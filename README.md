@@ -54,7 +54,7 @@ The color can be applied from XML or Java (please see sample for good examples) 
     
 #####    Output
     
-<font color="#5D4037">Hello<font> <font color="#F4511E">world !<font>
+![HelloWorld](./helloworld.png)
 
 ## Java
 
@@ -84,4 +84,4 @@ The color can be applied from XML or Java (please see sample for good examples) 
     
 #####    Output
     
-<font color="#5D4037">Hello<font> <font color="#F4511E">world !<font>    
+![HelloWorld](./helloworld.png)    
