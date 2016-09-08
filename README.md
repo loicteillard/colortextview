@@ -4,7 +4,7 @@
 Change color of words into a TextView.
 
 This library uses spannable strings to apply colors of the substring (no slow Html.fromHtml or other tricks/hacks)  
-The ColorTextView class is a direct subclass of TextView, so there is no restrictions to use custom fonts and so on...
+The ColorTextView class is a direct subclass of TextView, so there is no restrictions, you can still use custom fonts, text size...
 
 ![Screenshot](./screenshot.png)
 
