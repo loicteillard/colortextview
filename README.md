@@ -39,7 +39,7 @@ The color can be applied from XML or Java (please see sample for good examples) 
 | colortextview:clt_color1|  Text color of the first part of text|String|
 | colortextview:clt_txt2..10| Text of the next part of text |String|
 | colortextview:clt_color2..10|  Text color of the next part of text|String|
-| colortextview:clt_spaces |Add space between each text (words mode)|Boolean|
+| colortextview:clt_spaces |Automatically add space between each part of text (=word mode, default : false)|Boolean|
 
 ####  Example
 
